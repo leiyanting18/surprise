@@ -10,17 +10,29 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <script>
-        function jump() {
-            window.location.href = "third.html";
-        }
-    </script>
 </head>
 
 <body>
     <h1>你 准 备 好 了 吗??</h1>
     <img src="images/1.jpg" alt="">
-    <input type="button" value="查收小雷的爱" onclick=javascript:jump()>
+    <button type="button">请查收小雷的爱</button>
+    <script>
+        var img = document.querySelector('img');
+        var ensure = document.querySelector('button');
+        ensure.onclick = function () {
+            var uname = prompt('请输入小雷对你的爱称：');
+            if (uname == '垃圾面') {
+                img.src = 'images/2.jpg';
+            } else if (uname == '陈叉琳') {
+                img.src = 'images/3.jpg';
+            } else if (uname == '蒸甲鱼') {
+                img.src = 'images/4.jpg';
+            } else {
+                alert('呜呜呜~你不懂我~~');
+            }
+        }
+
+    </script>
 </body>
 
 </html>
